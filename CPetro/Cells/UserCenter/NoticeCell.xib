@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="2bG-VX-BzS" customClass="NoticeCell">
+            <rect key="frame" x="0.0" y="0.0" width="346" height="97"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2bG-VX-BzS" id="9cz-B4-yjD">
+                <rect key="frame" x="0.0" y="0.0" width="346" height="96.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoticeCellBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mdz-pR-2il">
+                        <rect key="frame" x="5" y="5" width="336" height="86.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3K-vj-hEV">
+                        <rect key="frame" x="19" y="33" width="18" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="按钮硕大的所大所多撒多撒大所" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA9-qQ-7wj">
+                        <rect key="frame" x="60" y="10" width="281" height="77"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTA-AT-Mzc">
+                        <rect key="frame" x="9.5" y="62" width="37.5" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vA9-qQ-7wj" firstAttribute="top" secondItem="9cz-B4-yjD" secondAttribute="top" constant="10" id="4qT-BO-jiK"/>
+                    <constraint firstAttribute="bottom" secondItem="Mdz-pR-2il" secondAttribute="bottom" constant="5" id="GCN-4b-0F2"/>
+                    <constraint firstItem="aTA-AT-Mzc" firstAttribute="centerX" secondItem="V3K-vj-hEV" secondAttribute="centerX" id="I3h-WS-09S"/>
+                    <constraint firstItem="Mdz-pR-2il" firstAttribute="leading" secondItem="9cz-B4-yjD" secondAttribute="leading" constant="5" id="V5c-eP-g4I"/>
+                    <constraint firstItem="V3K-vj-hEV" firstAttribute="leading" secondItem="9cz-B4-yjD" secondAttribute="leading" constant="19" id="d5j-Cj-yjq"/>
+                    <constraint firstAttribute="trailing" secondItem="Mdz-pR-2il" secondAttribute="trailing" constant="5" id="fQP-ZD-V22"/>
+                    <constraint firstItem="vA9-qQ-7wj" firstAttribute="trailing" secondItem="Mdz-pR-2il" secondAttribute="trailing" id="jTR-fW-H86"/>
+                    <constraint firstItem="aTA-AT-Mzc" firstAttribute="top" secondItem="V3K-vj-hEV" secondAttribute="bottom" constant="8" id="jYN-nm-TmW"/>
+                    <constraint firstItem="vA9-qQ-7wj" firstAttribute="leading" secondItem="9cz-B4-yjD" secondAttribute="leading" constant="60" id="kcP-YN-3DL"/>
+                    <constraint firstItem="Mdz-pR-2il" firstAttribute="top" secondItem="9cz-B4-yjD" secondAttribute="top" constant="5" id="qyE-L5-dJr"/>
+                    <constraint firstItem="V3K-vj-hEV" firstAttribute="centerY" secondItem="9cz-B4-yjD" secondAttribute="centerY" constant="-5" id="zWE-4M-G9Y"/>
+                    <constraint firstAttribute="bottom" secondItem="vA9-qQ-7wj" secondAttribute="bottom" constant="10" id="zXb-dD-G8V"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="_content" destination="vA9-qQ-7wj" id="SYf-25-15N"/>
+                <outlet property="_day" destination="V3K-vj-hEV" id="gol-fV-o58"/>
+                <outlet property="_timer" destination="aTA-AT-Mzc" id="yAq-t6-LRH"/>
+            </connections>
+            <point key="canvasLocation" x="-192" y="76.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="NoticeCellBg.png" width="576" height="150"/>
+    </resources>
+</document>

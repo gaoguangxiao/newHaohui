@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EatEggViewController">
+            <connections>
+                <outlet property="_EggImageView" destination="D1e-yp-aWQ" id="aeb-6j-Z39"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EggBackImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="ofO-1M-hgA">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EggTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ina-KD-x69">
+                    <rect key="frame" x="0.0" y="50" width="320" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="UPz-i4-s8Q"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WaB-aE-BYD">
+                    <rect key="frame" x="20" y="410" width="130.5" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UZ0-lL-0Iu"/>
+                    </constraints>
+                    <state key="normal" image="EggWinRecord.png"/>
+                    <connections>
+                        <action selector="selector:" destination="-1" eventType="touchUpInside" id="sm0-kW-xBk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aK0-aK-xOA">
+                    <rect key="frame" x="170" y="410" width="130" height="50"/>
+                    <state key="normal" image="EggAnnounce.png"/>
+                    <connections>
+                        <action selector="selector:" destination="-1" eventType="touchUpInside" id="FUi-D7-qm3"/>
+                    </connections>
+                </button>
+                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EggHit1.png" translatesAutoresizingMaskIntoConstraints="NO" id="D1e-yp-aWQ">
+                    <rect key="frame" x="0.0" y="190" width="320" height="180"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ina-KD-x69" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="CB3-CU-vbc"/>
+                <constraint firstItem="ofO-1M-hgA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="K1V-Vh-Xee"/>
+                <constraint firstItem="aK0-aK-xOA" firstAttribute="top" secondItem="WaB-aE-BYD" secondAttribute="top" id="QJu-Ig-cOw"/>
+                <constraint firstAttribute="trailing" secondItem="Ina-KD-x69" secondAttribute="trailing" id="TIC-U3-duC"/>
+                <constraint firstAttribute="trailing" secondItem="ofO-1M-hgA" secondAttribute="trailing" id="Vmv-30-lJC"/>
+                <constraint firstItem="WaB-aE-BYD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Vp1-vJ-Ghb"/>
+                <constraint firstAttribute="bottom" secondItem="ofO-1M-hgA" secondAttribute="bottom" id="Xcu-7q-Ixz"/>
+                <constraint firstItem="aK0-aK-xOA" firstAttribute="width" secondItem="WaB-aE-BYD" secondAttribute="width" id="d0g-Wz-Cu5"/>
+                <constraint firstItem="D1e-yp-aWQ" firstAttribute="top" secondItem="Ina-KD-x69" secondAttribute="bottom" id="dFw-9M-vNd"/>
+                <constraint firstItem="ofO-1M-hgA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eLb-tb-fon"/>
+                <constraint firstAttribute="bottom" secondItem="WaB-aE-BYD" secondAttribute="bottom" constant="20" id="gDJ-R4-ByK"/>
+                <constraint firstItem="aK0-aK-xOA" firstAttribute="bottom" secondItem="WaB-aE-BYD" secondAttribute="bottom" id="hm5-MG-37q"/>
+                <constraint firstAttribute="trailing" secondItem="D1e-yp-aWQ" secondAttribute="trailing" id="hzd-ON-Fww"/>
+                <constraint firstItem="aK0-aK-xOA" firstAttribute="top" secondItem="D1e-yp-aWQ" secondAttribute="bottom" constant="40" id="oog-El-Bos"/>
+                <constraint firstItem="Ina-KD-x69" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ssQ-iE-cWJ"/>
+                <constraint firstItem="D1e-yp-aWQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tIy-p7-18v"/>
+                <constraint firstAttribute="trailing" secondItem="aK0-aK-xOA" secondAttribute="trailing" constant="20" id="vFX-5E-yG1"/>
+                <constraint firstItem="aK0-aK-xOA" firstAttribute="leading" secondItem="WaB-aE-BYD" secondAttribute="trailing" constant="20" id="yE8-YM-lAZ"/>
+            </constraints>
+            <point key="canvasLocation" x="32" y="87"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="EggAnnounce.png" width="262" height="74"/>
+        <image name="EggBackImage.png" width="640" height="921"/>
+        <image name="EggHit1.png" width="640" height="889"/>
+        <image name="EggTitle.png" width="612" height="273"/>
+        <image name="EggWinRecord.png" width="262" height="74"/>
+    </resources>
+</document>

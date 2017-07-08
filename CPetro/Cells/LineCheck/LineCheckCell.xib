@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="256" id="idS-YF-Izy" customClass="LineCheckCell">
+            <rect key="frame" x="0.0" y="0.0" width="386" height="45"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="idS-YF-Izy" id="JHX-Wm-1bD">
+                <rect key="frame" x="0.0" y="0.0" width="386" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvU-e8-fVy">
+                        <rect key="frame" x="15" y="0.0" width="356" height="44"/>
+                        <state key="normal" image="ShopinputKuang.png"/>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5f-jc-g7X">
+                        <rect key="frame" x="25" y="0.0" width="346" height="44"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfl-ez-NYL">
+                        <rect key="frame" x="311" y="0.0" width="60" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="CnJ-pk-Jaz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="34ms" backgroundImage="LinceMs.png"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Sfl-ez-NYL" firstAttribute="top" secondItem="bvU-e8-fVy" secondAttribute="top" id="5Vq-4I-uYu"/>
+                    <constraint firstAttribute="trailing" secondItem="bvU-e8-fVy" secondAttribute="trailing" constant="15" id="9v3-A5-hlZ"/>
+                    <constraint firstItem="bvU-e8-fVy" firstAttribute="leading" secondItem="JHX-Wm-1bD" secondAttribute="leading" constant="15" id="Dcf-gJ-RGz"/>
+                    <constraint firstItem="Sfl-ez-NYL" firstAttribute="bottom" secondItem="bvU-e8-fVy" secondAttribute="bottom" id="ISW-3d-c9i"/>
+                    <constraint firstAttribute="bottom" secondItem="bvU-e8-fVy" secondAttribute="bottom" id="N94-qN-O6g"/>
+                    <constraint firstItem="R5f-jc-g7X" firstAttribute="bottom" secondItem="bvU-e8-fVy" secondAttribute="bottom" id="ZMb-fR-64T"/>
+                    <constraint firstItem="bvU-e8-fVy" firstAttribute="top" secondItem="JHX-Wm-1bD" secondAttribute="top" id="ZZr-7w-a4n"/>
+                    <constraint firstItem="R5f-jc-g7X" firstAttribute="leading" secondItem="bvU-e8-fVy" secondAttribute="leading" constant="10" id="kdn-CY-Ye0"/>
+                    <constraint firstItem="R5f-jc-g7X" firstAttribute="top" secondItem="bvU-e8-fVy" secondAttribute="top" id="mGE-Bf-tB8"/>
+                    <constraint firstItem="Sfl-ez-NYL" firstAttribute="trailing" secondItem="bvU-e8-fVy" secondAttribute="trailing" id="r6w-mh-uhi"/>
+                    <constraint firstItem="R5f-jc-g7X" firstAttribute="trailing" secondItem="bvU-e8-fVy" secondAttribute="trailing" id="szg-cb-TDq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="_lineSms" destination="Sfl-ez-NYL" id="I5j-CB-MgW"/>
+                <outlet property="_lineUrl" destination="R5f-jc-g7X" id="VJZ-jI-MZK"/>
+            </connections>
+            <point key="canvasLocation" x="-101" y="213"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LinceMs.png" width="137" height="87"/>
+        <image name="ShopinputKuang.png" width="594" height="88"/>
+    </resources>
+</document>

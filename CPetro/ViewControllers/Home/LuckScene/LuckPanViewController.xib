@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LuckPanViewController">
+            <connections>
+                <outlet property="_rotateWheel" destination="20o-60-QOm" id="pRk-o6-ekc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luckTitle.png" translatesAutoresizingMaskIntoConstraints="NO" id="b31-k6-HUV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="350" id="c3h-SB-SuT"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LuckPanCaishen.png" translatesAutoresizingMaskIntoConstraints="NO" id="VW5-ag-ExH">
+                    <rect key="frame" x="10" y="497" width="355" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="kX7-Yp-2hg"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LuckPan.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vbg-fD-hze">
+                    <rect key="frame" x="0.0" y="175" width="375" height="322"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zhuanpan.png" translatesAutoresizingMaskIntoConstraints="NO" id="20o-60-QOm">
+                    <rect key="frame" x="0.0" y="175" width="375" height="322"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LuckPanOnce.png" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-6y-Sgw">
+                    <rect key="frame" x="142.5" y="288.5" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="TG6-aZ-nuy"/>
+                        <constraint firstAttribute="width" constant="90" id="bVP-Cs-fH1"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YKf-x4-6RZ">
+                    <rect key="frame" x="142.5" y="288.5" width="90" height="90"/>
+                    <connections>
+                        <action selector="PickNumber:" destination="-1" eventType="touchUpInside" id="VxJ-4E-X8t"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="luckKJiantou.png" translatesAutoresizingMaskIntoConstraints="NO" id="PgN-mR-3Jz">
+                    <rect key="frame" x="175" y="268.5" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Cdb-XH-icb"/>
+                        <constraint firstAttribute="width" constant="25" id="qFl-PQ-uuE"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2K-W5-jvU">
+                    <rect key="frame" x="20" y="587" width="158" height="50"/>
+                    <state key="normal" image="EggAnnounce.png"/>
+                    <connections>
+                        <action selector="selector:" destination="-1" eventType="touchUpInside" id="1e7-Lt-UYC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNS-jN-Ele">
+                    <rect key="frame" x="197.5" y="587" width="157.5" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="6ao-sT-Vb2"/>
+                    </constraints>
+                    <state key="normal" image="EggWinRecord.png"/>
+                    <connections>
+                        <action selector="selector:" destination="-1" eventType="touchUpInside" id="h8p-MQ-UpY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LAi-6y-Sgw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3QH-Bl-lAt"/>
+                <constraint firstAttribute="trailing" secondItem="Vbg-fD-hze" secondAttribute="trailing" id="42v-yY-tzA"/>
+                <constraint firstItem="b31-k6-HUV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Je-4d-EAR"/>
+                <constraint firstItem="YKf-x4-6RZ" firstAttribute="trailing" secondItem="LAi-6y-Sgw" secondAttribute="trailing" id="6ye-gv-ldq"/>
+                <constraint firstItem="YKf-x4-6RZ" firstAttribute="bottom" secondItem="LAi-6y-Sgw" secondAttribute="bottom" id="9hZ-NE-hKq"/>
+                <constraint firstAttribute="bottom" secondItem="X2K-W5-jvU" secondAttribute="bottom" constant="30" id="BgX-bm-57P"/>
+                <constraint firstItem="20o-60-QOm" firstAttribute="trailing" secondItem="Vbg-fD-hze" secondAttribute="trailing" id="DdJ-dt-Aq2"/>
+                <constraint firstItem="X2K-W5-jvU" firstAttribute="top" secondItem="DNS-jN-Ele" secondAttribute="top" id="GQo-5O-JUH"/>
+                <constraint firstItem="Vbg-fD-hze" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ii4-VL-DXC"/>
+                <constraint firstAttribute="trailing" secondItem="DNS-jN-Ele" secondAttribute="trailing" constant="20" id="JDR-Zh-y3s"/>
+                <constraint firstItem="X2K-W5-jvU" firstAttribute="top" secondItem="VW5-ag-ExH" secondAttribute="bottom" id="K4k-0x-HEP"/>
+                <constraint firstItem="VW5-ag-ExH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Kd3-k8-bH0"/>
+                <constraint firstItem="LAi-6y-Sgw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MWJ-Ze-6E4"/>
+                <constraint firstItem="VW5-ag-ExH" firstAttribute="top" secondItem="Vbg-fD-hze" secondAttribute="bottom" id="MhG-W6-Jqn"/>
+                <constraint firstItem="X2K-W5-jvU" firstAttribute="bottom" secondItem="DNS-jN-Ele" secondAttribute="bottom" id="MyQ-s1-ZBM"/>
+                <constraint firstItem="20o-60-QOm" firstAttribute="leading" secondItem="Vbg-fD-hze" secondAttribute="leading" id="Nl8-he-dpu"/>
+                <constraint firstItem="20o-60-QOm" firstAttribute="top" secondItem="Vbg-fD-hze" secondAttribute="top" id="SpV-UN-3AD"/>
+                <constraint firstItem="20o-60-QOm" firstAttribute="bottom" secondItem="Vbg-fD-hze" secondAttribute="bottom" id="UlA-Jy-Ksc"/>
+                <constraint firstItem="DNS-jN-Ele" firstAttribute="leading" secondItem="X2K-W5-jvU" secondAttribute="trailing" constant="20" id="bI8-G5-Gk1"/>
+                <constraint firstItem="X2K-W5-jvU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="cEX-ZR-56P"/>
+                <constraint firstItem="b31-k6-HUV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cxc-ge-2gZ"/>
+                <constraint firstItem="PgN-mR-3Jz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gpz-MP-fsn"/>
+                <constraint firstAttribute="trailing" secondItem="VW5-ag-ExH" secondAttribute="trailing" constant="10" id="hqD-6S-bal"/>
+                <constraint firstItem="YKf-x4-6RZ" firstAttribute="top" secondItem="LAi-6y-Sgw" secondAttribute="top" id="jCF-CF-PoL"/>
+                <constraint firstAttribute="trailing" secondItem="b31-k6-HUV" secondAttribute="trailing" id="k2Q-v5-5Xz"/>
+                <constraint firstItem="Vbg-fD-hze" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="175" id="pem-tT-UwA"/>
+                <constraint firstItem="YKf-x4-6RZ" firstAttribute="leading" secondItem="LAi-6y-Sgw" secondAttribute="leading" id="r0L-cn-Crq"/>
+                <constraint firstItem="LAi-6y-Sgw" firstAttribute="top" secondItem="PgN-mR-3Jz" secondAttribute="bottom" constant="-5" id="rNM-oF-gAG"/>
+                <constraint firstItem="X2K-W5-jvU" firstAttribute="width" secondItem="DNS-jN-Ele" secondAttribute="width" id="yfk-vI-8wX"/>
+            </constraints>
+            <point key="canvasLocation" x="72" y="107"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="EggAnnounce.png" width="262" height="74"/>
+        <image name="EggWinRecord.png" width="262" height="74"/>
+        <image name="LuckPan.png" width="501" height="509"/>
+        <image name="LuckPanCaishen.png" width="610" height="149"/>
+        <image name="LuckPanOnce.png" width="143" height="144"/>
+        <image name="luckKJiantou.png" width="32" height="32"/>
+        <image name="luckTitle.png" width="597" height="413"/>
+        <image name="zhuanpan.png" width="714" height="714"/>
+    </resources>
+</document>

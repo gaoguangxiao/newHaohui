@@ -1,0 +1,29 @@
+8
+
+dir
+2765
+https://ggx@192.168.1.103/svn/%E6%98%A5%E7%AC%8B%E7%BA%A2%E5%8C%85/IOS%E4%BB%A3%E7%A0%81/trunk/Base/Resources/Xml/zh-Hans.lproj
+https://ggx@192.168.1.103/svn/%E6%98%A5%E7%AC%8B%E7%BA%A2%E5%8C%85
+
+
+
+2016-01-12T02:12:05.033601Z
+2496
+ggx
+
+
+svn:special svn:externals svn:needs-lock
+
+Localizable.strings
+file
+
+
+
+
+2015-10-30T00:58:36.000000Z
+0cc1e14337c8f149bddc33582675f1ff
+2016-01-12T02:12:05.033601Z
+2496
+ggx
+has-props
+

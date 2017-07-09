@@ -23,8 +23,6 @@
 +(CGDataResult *)getResultFromDic:(NSDictionary *)dic{
     CGDataResult *result = [[CGDataResult alloc]init];
     if (dic&&[[dic objectForKey:API_STATUS] isKindOfClass:[NSString class]]) {//成功
-        
-        
         result.status = [[[dic objectForKey:API_STATUS] lowercaseString]isEqualToString:@"fail"]?@(NO):@(YES);
         if ([[dic objectForKey:API_MSG]isKindOfClass:[NSString class]]) {
             result.errorMsg = [dic objectForKey:API_MSG]?[dic objectForKey:API_MSG]:@"操作成功";

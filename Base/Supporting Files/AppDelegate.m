@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 #import "HZTabBarController.h"
+//1、APP在启动的时候，获取钥匙串的
+#import "KeychainItemWrapper.h"
 @interface AppDelegate ()
 
 @end
@@ -21,7 +23,19 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self setsViewController];
     [self.window makeKeyAndVisible];
-    
+    //9340773321
+    //    CGDataResult *resetAcccpunt
+    KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"comXinHaoHuikey" accessGroup:nil];// 1
+    NSString *imkey = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
+    if (!imkey || imkey.length==0) {
+        //模拟器获取的钥匙串 是空
+        NSString *randomkey = [NSString stringWithFormat:@"%u%u%u%u%u%u%u%u%u%u",arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10];
+        [keychain setObject:randomkey forKey:(__bridge id)(kSecAttrAccount)];// 2
+        
+    }
+    imkey = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
+    [CustomUtil saveAcessToken:imkey];
+    NSLog(@"客户端绑定码：%@",[CustomUtil getToken]);
     return YES;
 }
 #pragma mark -初始化控制器

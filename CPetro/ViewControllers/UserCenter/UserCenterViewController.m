@@ -33,12 +33,12 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    if ([CustomUtil isUserLogin]) {
-        
+//    if ([CustomUtil isUserLogin]) {
+    
         [self getUserInfoMethod];
         
         [self getVipUserInfoMethod];
-    }
+//    }
 }
 
 - (void)viewDidLoad {
@@ -46,19 +46,10 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItemTitle = @"我的";
 //    NSLog(@"====%@",[CustomUtil getToken]);
-    if ([CustomUtil getToken].length == 0) {//用户登录
+    
+    //用户未绑定情况情况
+    if ([CustomUtil isUserLogin]) {//用户登录
         //判断是否绑定加载不同的view
-        LRMoreInputView *inputView = [[LRMoreInputView alloc]initItemWithFram:CGRectMake(0, 110, SCREEN_WIDTH, 100) andData:@[@{@"assistantName":@"账户",@"assistantAccount":@"未绑定"},
-                                        @{@"assistantName":@"等级",@"assistantAccount":@"未绑定"},
-                                        @{@"assistantName":@"积分",@"assistantAccount":@"未绑定"}]];
-        [self.view addSubview:inputView];
-        
-        
-        BSButtonView *topView = [[BSButtonView alloc]initItemWithFram:CGRectMake(25, CGRectGetMaxY(inputView.frame) + 10, SCREEN_WIDTH - 50, 45) andData:@[[UIImage imageNamed:@"bandAccountBTn"]]];
-        topView.tag = 10;
-        topView.delegate = self;
-        [self.view addSubview:topView];
-
     }
 }
 
@@ -84,6 +75,18 @@
             [CustomUtil saveAcessToken:[CustomUtil getUserInfo].clientId];
             
             [self userLoginSuccess];
+        }else{
+            //用户未绑定信息
+            LRMoreInputView *inputView = [[LRMoreInputView alloc]initItemWithFram:CGRectMake(0, 110, SCREEN_WIDTH, 100) andData:@[@{@"assistantName":@"账户",@"assistantAccount":@"未绑定"},
+                                                                                                                                  @{@"assistantName":@"等级",@"assistantAccount":@"未绑定"},
+                                                                                                                                  @{@"assistantName":@"积分",@"assistantAccount":@"未绑定"}]];
+            [self.view addSubview:inputView];
+            
+            
+            BSButtonView *topView = [[BSButtonView alloc]initItemWithFram:CGRectMake(25, CGRectGetMaxY(inputView.frame) + 10, SCREEN_WIDTH - 50, 45) andData:@[[UIImage imageNamed:@"bandAccountBTn"]]];
+            topView.tag = 10;
+            topView.delegate = self;
+            [self.view addSubview:topView];
         }
     }];
 }

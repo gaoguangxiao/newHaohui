@@ -20,6 +20,9 @@
 
 @property(nonatomic,strong)UIImageView *imageTitle;
 @property(nonatomic,strong)UIImageView *backImageView;
+
+@property(nonatomic,strong) NSArray*urlArray;
+
 /**
  加载网络请求
 

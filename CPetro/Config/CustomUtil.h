@@ -10,6 +10,7 @@
 //用户信息
 #import "EntityUser.h"
 #define U_TOKEN @"TOKEN"
+#define U_ISLOGIN @"LOGINSTATE"//登录状态
 #define U_INFO @"U_INFO"
 @interface CustomUtil : NSObject
 +(BOOL)isUserLogin;

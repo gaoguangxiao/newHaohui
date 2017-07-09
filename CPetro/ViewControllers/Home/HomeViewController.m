@@ -22,7 +22,7 @@
 @interface HomeViewController ()<MorePictureTwoViewDelegate,MorePictureViewDelegate>
 {
     NSMutableArray *_homeArray;
-    NSArray*urlArray;
+//    NSArray*urlArray;
     NSMutableArray *sunhuanCount;
     MorePictureView *morePictureView;
 }
@@ -111,7 +111,7 @@
         
        __block NSString *hddUrl;
       __block  NSString *yhhd;
-            [urlArray enumerateObjectsUsingBlock:^(EntityUrl*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [self.urlArray enumerateObjectsUsingBlock:^(EntityUrl*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 if ([obj.type isEqualToString:@"hddt"]) {
                     hddUrl = obj.url;
                 }else if([obj.type isEqualToString:@"yhhd"]){
@@ -151,46 +151,46 @@
     }
 }
 #pragma mark - 右上角
--(void)showAddComment:(UIBarButtonItem *)item{
-    item.enabled = NO;
-    
-    CommentAddControl *control = [[CommentAddControl alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    
-   
-    control.clickAction = ^(NSInteger index){
-        if(index==0 || index== 1){
-            __block NSString *hddUrl;
-            __block  NSString *yhhd;
-            [urlArray enumerateObjectsUsingBlock:^(EntityUrl*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                if ([obj.type isEqualToString:@"hddt"]) {
-                    hddUrl = obj.url;
-                }else if([obj.type isEqualToString:@"yhhd"]){
-                    yhhd = obj.url;
-                    
-                }
-            }];
-            if (index == 1) {
-                CL_WebView_VC *Vc = CreateViewController(@"CL_WebView_VC");
-                Vc.navigationTitle = @"活动自助大厅";
-                Vc.url = [NSURL URLWithString:hddUrl];
-                PushViewController(Vc);
-            }else{
-                CL_WebView_VC *Vc = CreateViewController(@"CL_WebView_VC");
-                Vc.navigationTitle = @"优惠活动";
-                Vc.url = [NSURL URLWithString:yhhd];
-                PushViewController(Vc);
-            }
-        }else if (index == 2){
-             PushViewControllerName(@"LineCheckViewController");
-        }else{
-            PushViewControllerName(@"AboutOurViewController");
-        }
-        item.enabled = YES;
-    };
-    
-    [self.view addSubview:control];
-    
-}
+//-(void)showAddComment:(UIBarButtonItem *)item{
+//    item.enabled = NO;
+//    
+//    CommentAddControl *control = [[CommentAddControl alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+//    
+//   
+//    control.clickAction = ^(NSInteger index){
+//        if(index==0 || index== 1){
+//            __block NSString *hddUrl;
+//            __block  NSString *yhhd;
+//            [self.urlArray enumerateObjectsUsingBlock:^(EntityUrl*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                if ([obj.type isEqualToString:@"hddt"]) {
+//                    hddUrl = obj.url;
+//                }else if([obj.type isEqualToString:@"yhhd"]){
+//                    yhhd = obj.url;
+//                    
+//                }
+//            }];
+//            if (index == 1) {
+//                CL_WebView_VC *Vc = CreateViewController(@"CL_WebView_VC");
+//                Vc.navigationTitle = @"活动自助大厅";
+//                Vc.url = [NSURL URLWithString:hddUrl];
+//                PushViewController(Vc);
+//            }else{
+//                CL_WebView_VC *Vc = CreateViewController(@"CL_WebView_VC");
+//                Vc.navigationTitle = @"优惠活动";
+//                Vc.url = [NSURL URLWithString:yhhd];
+//                PushViewController(Vc);
+//            }
+//        }else if (index == 2){
+//             PushViewControllerName(@"LineCheckViewController");
+//        }else{
+//            PushViewControllerName(@"AboutOurViewController");
+//        }
+//        item.enabled = YES;
+//    };
+//    
+//    [self.view addSubview:control];
+//    
+//}
 -(void)didActionBottomIndex:(NSInteger)index{
     
 }

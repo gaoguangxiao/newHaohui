@@ -510,8 +510,8 @@
 			isa = PBXGroup;
 			children = (
 				1E0578CA1E8FF32C00C69757 /* KeychainItemWrapper.h */,
-				1E1996471E90BF97000D4FE1 /* ShareHandle */,
 				1E0578CB1E8FF32C00C69757 /* KeychainItemWrapper.m */,
+				1E1996471E90BF97000D4FE1 /* ShareHandle */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1362,6 +1362,7 @@
 				TargetAttributes = {
 					9A8B0C1B1E6E9E6500CE5DBF = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 67E94H2G5A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1772,7 +1773,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 67E94H2G5A;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = CPetro/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Base/Supporting Files/Info.plist";
@@ -1780,7 +1781,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cbh.xinhaohui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1790,7 +1791,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 67E94H2G5A;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = CPetro/Config/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/Base/Supporting Files/Info.plist";
@@ -1798,7 +1799,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cbh.xinhaohui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

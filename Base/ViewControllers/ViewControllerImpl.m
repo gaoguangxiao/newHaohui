@@ -12,9 +12,7 @@
 #import "CommentAddControl.h"
 #import "EntityUrl.h"
 @interface ViewControllerImpl ()
-{
-    NSArray*urlArray;
-}
+
 @end
 
 @implementation ViewControllerImpl
@@ -117,7 +115,7 @@
         return [Service loadNetWorkingByParameters:@{@"clientId":[CustomUtil getToken]} andBymethodName:@"api/viewUrl/get"];
     } completionBlock:^(BOOL b, CGDataResult *r) {
         if(b){
-            urlArray = [EntityUrl getObjecsFromDic:r.dataList];
+            self.urlArray = [EntityUrl getObjecsFromDic:r.dataList];
         }
     }];
 }
@@ -133,7 +131,7 @@
         if(index==0 || index== 1){
             __block NSString *hddUrl;
             __block  NSString *yhhd;
-            [urlArray enumerateObjectsUsingBlock:^(EntityUrl*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [self.urlArray enumerateObjectsUsingBlock:^(EntityUrl*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 if ([obj.type isEqualToString:@"hddt"]) {
                     hddUrl = obj.url;
                 }else if([obj.type isEqualToString:@"yhhd"]){

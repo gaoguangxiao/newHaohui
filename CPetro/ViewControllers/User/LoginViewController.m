@@ -10,9 +10,6 @@
 
 #import "LRInputView.h"
 #import "BSButtonView.h"
-
-#import "KeychainItemWrapper.h"
-//#import "CGBarButtonItem.h"
 @interface LoginViewController ()<BSButtonViewDelegate>
 
 @end
@@ -68,37 +65,24 @@
          [self.view makeToast:@"账户不一样" duration:1.0f position:@"center"];
         return;
     }
-    //客户端绑定码，
-//    http://127.0.0.1:8888/api/member/bind/
-//    http://103.226.152.162:7777/api/member/bind?clientId=1&clientType=2&memberName=test1
-    
+
     //重置用户
-//    http://103.226.152.162:7777/api/member/resetTestUser?memberName=test4&resetType=1&point=10000
+//http://xtd.cm:81/api/member/resetTestUser?memberName=test4&resetType=1&point=10000
     
-//    http://103.226.152.162:7777/api/member/resetTestUser?memberName=test2&resetType=1&point=10000
+//    http://xtd.cm:81/api/member/resetTestUser?memberName=test1&resetType=1&point=10000
     //登录用户
 //    http://103.226.152.162:7777/api/member/bind?memberName=test1&clientId=0EBF04D9-ED1B-4AE0-B7A3-49308765EFC4&clientType=2&
 
-    //9340773321
-//    CGDataResult *resetAcccpunt
-    KeychainItemWrapper *keychain = [[KeychainItemWrapper alloc] initWithIdentifier:@"comzrgginkey" accessGroup:nil];// 1
-    NSString *imkey = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
-    
-    if (!imkey || imkey.length==0) {
-        NSString *randomkey = [NSString stringWithFormat:@"%u%u%u%u%u%u%u%u%u%u",arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10,arc4random()%10];
-        [keychain setObject:randomkey forKey:(__bridge id)(kSecAttrAccount)];// 2
-        
-    }
-    imkey = [keychain objectForKey:(__bridge id)(kSecAttrAccount)];
+
     
     [self showAnimated:YES title:@"正在登陆" whileExecutingBlock:^CGDataResult *{
-        return [Service loadNetWorkingByParameters:@{@"clientId":imkey,@"memberName":accountNumber,@"clientType":@"2"} andBymethodName:@"api/member/bind"];
+        return [Service loadNetWorkingByParameters:@{@"clientId":[CustomUtil getToken],@"memberName":accountNumber,@"clientType":@"2"} andBymethodName:@"api/member/bind"];
     } completionBlock:^(BOOL b, CGDataResult *r) {
         if (b) {
             //保存用户信息
             [CustomUtil saveUserInfo:(EntityUser *)[EntityUser getObjectFromDic:r.dataList]];
             
-            [CustomUtil saveAcessToken:[CustomUtil getUserInfo].clientId];
+          
             
             //绑定成功 对首页进行刷新处理
             [[NSNotificationCenter defaultCenter]postNotificationName:K_USERCHANGEASSISTANT object:@(YES)];

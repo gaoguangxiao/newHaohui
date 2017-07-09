@@ -11,12 +11,19 @@
 @implementation CustomUtil
 
 +(BOOL)isUserLogin{
-    if ([USER_DEFAULT valueForKey:U_TOKEN]) {
+    if ([[USER_DEFAULT valueForKey:U_ISLOGIN] boolValue]) {
         return YES;
     }else{
         return NO;
     }
 }
+//
++(void)isSaveLoginState:(BOOL)loginState{
+    NSUserDefaults  *settings = USER_DEFAULT;
+    [settings setObject:@(loginState) forKey:U_ISLOGIN];
+    [settings synchronize];
+}
+
 +(void)saveAcessToken:(NSString *)token{
     NSUserDefaults  *settings = USER_DEFAULT;
     [settings setObject:token forKey:U_TOKEN];

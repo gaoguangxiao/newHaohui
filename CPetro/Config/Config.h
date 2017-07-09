@@ -17,7 +17,7 @@
 //#define WEBSEARVICE  [NSString stringWithFormat:@"http://%@/MethodIn.asmx",HOSTDOMAIN]
 
 //http://103.226.152.162:7777/
-#define HOSTDOMAIN @"103.226.152.162:7777"
+#define HOSTDOMAIN @"xtd.cm:81"
 #define WEBSEARVICE  [NSString stringWithFormat:@"http://%@/",HOSTDOMAIN]
 
 //设置Webservice变量结构
